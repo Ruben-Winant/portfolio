@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155524738-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155524738-1');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Ruben Winant</title>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        /* SCROLLBAR */
+        body::-webkit-scrollbar {
+            width: 0.6em;
+        }
+
+        body::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px #1B242F;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #3898EC;
+            outline: 1px solid #1B242F;
+        }
+
+        /* NAVIGATION */
+        .menu {
+            margin-top: 25px;
+            max-width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .navList {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .navItem {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+            margin-left: 25px;
+        }
+
+        .navMain {
+            font-size: 40px;
+            color: black;
+        }
+
+        /* LINKS */
+        a {
+            text-decoration: none;
+        }
+
+        /* BUTTONS */
+        button {
+            color: white;
+            background-color: #3898EC;
+            border: none;
+            padding: 14px 20px 14px 20px;
+            font-size: large;
+        }
+
+        button:hover {
+            box-shadow: -10px 10px rgb(30, 110, 180);
+            cursor: pointer;
+        }
+
+        /* CONTAINERS */
+        section {
+            margin-top: 120px;
+            margin-bottom: 120px;
+        }
+
+        article {
+            max-width: 50%;
+            align-items: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0px 20px 0px;
+            background-color: #1B242F;
+            color: white;
+            padding: 70px;
+        }
+
+        .aboutContainer {
+            display: grid;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .portfolioContainer,
+        .contactContainer,
+        .skillsContainer,
+        .menu {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contactContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .skillsContent {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footerContent {
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* TEXTS  */
+        h1 {
+            margin-top: -5px;
+            font-weight: normal;
+            font-size: xx-large;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: x-large;
+        }
+
+        span {
+            font-weight: initial;
+            font-size: larger;
+        }
+
+        i {
+            color: #3898EC;
+        }
+
+        /* CONTEXT SPECIFIC */
+        .aboutLeft {
+            grid-column: 1;
+            max-width: 85%;
+        }
+
+        .aboutRight {
+            grid-column: 2;
+            text-align: right;
+        }
+
+        .portfolioBottom {
+            display: grid;
+            justify-content: space-between;
+        }
+
+        .portfolioCard {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+            width: 200px;
+            grid-row: 1;
+            max-height: 300px;
+            min-height: 100px;
+        }
+
+        .portfolioCard img {
+            max-width: 200px;
+            min-width: 200px;
+            max-height: 200px;
+            min-height: 180px;
+            margin-bottom: 5px;
+        }
+
+        .portfolioCard:hover {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .portfolioCard span {
+            padding: 4px;
+        }
+
+        .mediaCell {
+            display: flex;
+            width: 200px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .mediaCell:hover {
+            cursor: pointer;
+        }
+
+        .mediaName {
+
+            color: white;
+            text-decoration: none;
+        }
+
+        /* ---------------------------------------------------------------- */
+
+        .skillListTitle:hover {
+            cursor: pointer;
+        }
+
+        .skillsList {
+            list-style: none;
+            padding-left: 15px;
+        }
+
+        .skillItem {
+            margin-bottom: 10px;
+            width: 160px;
+        }
+
+        /* SKILL RATINGS */
+        .good {
+            color: rgb(134, 214, 13);
+            align-self: flex-end;
+        }
+
+        .mediocre {
+            color: rgb(216, 131, 20);
+            align-self: flex-end;
+        }
+
+        .beginner {
+            color: rgb(211, 28, 28);
+            align-self: flex-end;
+        }
+
+        /* ANIMATIONS */
+        .dribbble:hover {
+            -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
+        }
+
+        .linkedin:hover {
+            -webkit-animation: heartBeat 1s infinite;
+            animation: heartBeat 1s infinite;
+        }
+
+        .twitter:hover {
+            -webkit-animation: swing 1s infinite;
+            animation: swing 1s infinite;
+        }
+
+        .inDev {
+            position: absolute;
+            border-top: 40px solid rgb(41, 41, 41);
+            border-bottom: 40px solid transparent;
+            border-right: 40px solid transparent;
+            width: 80px;
+            color: white;
+
+        }
+
+        .mobileMenuButton {
+            display: none;
+            position: fixed;
+            right: 50px;
+            top: 50px;
+        }
+
+        .rectangle {
+            height: 4px;
+            width: 30px;
+            border-radius: 25px;
+            background-color: #1B242F;
+            margin-bottom: 4px;
+        }
+
+        /* MOBILE MENU POP UP */
+        .popUpMenu {
+            display: none;
+            min-height: 100%;
+            background-color: white;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        .navListPopUp {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .navItemPopUp {
+            display: block;
+            text-decoration: none;
+            color: #1B242F;
+            font-size: xx-large;
+            font-weight: 700;
+            margin-bottom: 20%;
+            margin-top: 20%;
+        }
+
+        /* -------------------------------- MEDIA QUERIES -------------------------------- */
+        /* should cover most smartphones */
+        @media (max-width: 767.98px) {
+
+            .mobileMenuButton {
+                display: block;
+            }
+
+            /* Hide img */
+            .aboutContainer img {
+                display: none;
+            }
+
+            /* hide default menu */
+            .menu {
+                display: none;
+            }
+
+            /* Make everything wider */
+            article {
+                max-width: 60%;
+            }
+
+            /* center button */
+            .mediaCell {
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+
+            /* content row => column */
+            .footerContent {
+                flex-direction: column;
+            }
+
+            /* give buttons their shadow */
+            button {
+                box-shadow: -10px 10px rgb(30, 110, 180);
+            }
+
+            /* bring section a bit closer to eachother */
+            section {
+                margin-top: 80px;
+            }
+
+            /* widen left side of about section */
+            .aboutLeft {
+                max-width: 100%;
+            }
+
+            /* place contact content in a column */
+            .contactContainer {
+                flex-direction: column;
+            }
+
+            .contactButton {
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* center skills */
+            .skillsContent {
+                flex-direction: column;
+                align-items: left;
+            }
+
+            /* add some space for easier access */
+            .skillsListContainer {
+                margin-bottom: 20px;
+            }
+
+
+            /* center projects */
+            .portfolioBottom {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* place portfolio card vertical */
+            .portfolioCard {
+                max-width: 200px;
+                grid-row: auto;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+
+        /* everything between */
+        @media (min-width: 768px) {
+
+            .mobileMenuButton {
+                display: block;
+            }
+
+            /* Mobile menu */
+            .mobileMenu {
+                display: block;
+            }
+
+            /* hide default menu */
+            .menu {
+                display: none;
+            }
+
+            /* Make everything wider */
+            article {
+                max-width: 70%;
+            }
+
+            /* Hide img */
+            .aboutContainer img {
+                display: none;
+            }
+
+            /* bring section a bit closer to eachother */
+            section {
+                margin-top: 80px;
+            }
+
+            /* center projects */
+            .portfolioBottom {
+                display: grid;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            /* place portfolio card vertical */
+            .portfolioCard {
+                max-width: 200px;
+                grid-row: auto;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            button {
+                box-shadow: -10px 10px rgb(30, 110, 180);
+            }
+
+            .r1 {
+                grid-row: 1;
+            }
+
+            .r2 {
+                grid-row: 2;
+            }
+        }
+
+        /* small computers */
+        @media (min-width: 1050px) {
+
+            .mobileMenuButton {
+                display: none;
+            }
+
+            article {
+                max-width: 60%;
+            }
+
+            .menu {
+                display: flex;
+                max-width: 60%;
+            }
+
+            /* Mobile menu */
+            .mobileMenu {
+                display: none;
+            }
+
+            .aboutContainer img {
+                display: block;
+            }
+
+            .aboutContainer {
+                justify-content: space-between;
+            }
+
+            .r1 {
+                grid-row: 1;
+            }
+
+            .r2 {
+                grid-row: 1;
+            }
+
+            button {
+                box-shadow: none;
+            }
+
+            .menu,
+            article {
+                max-width: 56%;
+            }
+        }
+
+        /* biggest screens */
+        @media (min-width: 1441px) {
+
+
+            .menu,
+            article {
+                max-width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="menu">
+        <a href="#" class="navMain">Home</a>
+        <ul class="navList">
+            <li><a href="#about" class="navItem">About</a></li>
+            <li class="navItem">|</li>
+            <li><a href="#skills" class="navItem">Skills</a></li>
+            <li class="navItem">|</li>
+            <li><a href="#portfolio" class="navItem">Portfolio</a></li>
+            <li class="navItem">|</li>
+            <li><a href="#contact" class="navItem">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobileMenuButton" id="mobileMenuButton">
+        <div class="rectangle"></div>
+        <div class="rectangle hiderec"></div>
+        <div class="rectangle"></div>
+    </div>
+    <div class="popUpMenu" id="popUpMenu">
+        <ul class="navListPopUp">
+            <li><a href="#about" class="navItemPopUp">About</a></li>
+            <li><a href="#skills" class="navItemPopUp">Skills</a></li>
+            <li><a href="#portfolio" class="navItemPopUp">Portfolio</a></li>
+            <li><a href="#contact" class="navItemPopUp">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <article class="aboutContainer">
+            <div class="aboutLeft">
+                <h1>Hi, i'm Ruben</h1>
+                <span>A junior developer from Bierbeek.</span>
+                <br>
+                <br>
+                <p>
+                    I enjoy building websites and learning new stuff like app and game development.
+                </p>
+                <p>
+                    I'm currently looking for my first job. So if you got any questions or just want to chat, feel free
+                    to send them my way.
+                </p>
+                <a href="#contact">
+                    <button>Contact</button>
+                </a>
+            </div>
+            <div class="aboutRight">
+                <div class="outersquare">
+                    <img class="aboutImg" src="https://via.placeholder.com/300" alt="">
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <article class="skillsContainer">
+            <h2>Skills</h2>
+            <span>A list of the things i can do!</span>
+            <br>
+            <br>
+            <div class="skillsContent">
+                <details class="skillsListContainer">
+                    <summary class="skillListTitle">
+                        Front-end
+                    </summary>
+                    <ul class="skillsList">
+                        <li class="skillItem">
+                            <i class="good fa fa-circle"></i> <i class="devicon-html5-plain colored"></i> HTML </i>
+                        </li>
+                        <li class="skillItem">
+                            <i class="good fa fa-circle"></i> <i class="devicon-css3-plain colored"></i> CSS
+                        </li>
+
+                        <li class="skillItem">
+                            <i class="good fa fa-circle"></i> <i class="devicon-bootstrap-plain colored"></i> Bootstrap
+                        </li>
+                        <li class="skillItem">
+                            <i class="good fa fa-circle"></i> <i class="devicon-javascript-plain colored"></i>
+                            Javascript
+                        </li>
+                        <li class="skillItem">
+                            <i class="mediocre fa fa-circle"></i> <i class="devicon-react-original colored"></i> React
+                        </li>
+                        <li class="skillItem">
+                            <i class="beginner fa fa-circle"></i> <i class="devicon-sass-original colored"></i> Sass
+                        </li>
+                    </ul>
+                </details>
+                <details class="skillsListContainer">
+                    <summary class="skillListTitle">
+                        Back-end
+                    </summary>
+                    <ul class="skillsList">
+                        <li class="skillItem">
+                            <i class="good fa fa-circle"></i> <i class="devicon-dot-net-plain colored"></i> Asp.net core
+                        </li>
+                        <li class="skillItem">
+                            <i class="mediocre fa fa-circle"></i> <i class="devicon-mysql-plain colored"></i> Sql
+                        </li>
+                        <li class="skillItem">
+                            <i class="beginner fa fa-circle"></i> <i class="devicon-php-plain colored"></i> Php
+                        </li>
+
+                    </ul>
+                </details>
+                <details class="skillsListContainer">
+                    <summary class="skillListTitle">
+                        Other
+                    </summary>
+                    <ul class="skillsList">
+                        <li class="skillItem"><i class="good fa fa-circle"></i> <i
+                                class="devicon-trello-plain colored"></i> Trello</li>
+                        <li class="skillItem"><i class="good fa fa-circle"></i> <i class="fa fa-users"></i> Scrum</li>
+
+                        <li class="skillItem">
+                            <i class="mediocre fa fa-circle"></i> <i class="devicon-react-original colored"></i> React
+                            native
+                        </li>
+                        <li class="skillItem">
+                            <i class="mediocre fa fa-circle"></i> <i class="devicon-typescript-plain colored"></i>
+                            Typescript
+                        </li>
+                        <li class="skillItem"><i class="beginner fa fa-circle"></i> <i><img style="width: 20px;"
+                                    src="unity-brands.svg" alt="unity logo"></i>
+                            Unity
+                        </li>
+                    </ul>
+                </details>
+            </div>
+        </article>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio">
+        <article class="portfolioContainer">
+            <div class="portfolioTop">
+                <h2>Portfolio</h2>
+                <span>Below you'll find some of my ongoing and completed projects.</span>
+            </div>
+            <br>
+            <div class="portfolioBottom">
+                <div class="portfolioCard r1">
+                    <img src="cssTest.png" alt="">
+                    <span>React Native App</span>
+                </div>
+                <div class="portfolioCard r1">
+                    <a href="https://dribbble.com/rubenw">
+                        <!-- <div class="inDev"> -->
+                        <img src="dribbble-logo.svg" alt="">
+                        <span>UI designs dribbble</span>
+                    </a>
+
+                </div>
+                <div class="portfolioCard r2">
+                    <img src="https://via.placeholder.com/200" alt="">
+                    <span>Project three</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <article class="contactContainer">
+            <div>
+                <h2>Contact</h2>
+                <span>I'll try to come back to you as quickly as possible.</span>
+            </div>
+            <div class="contactButton">
+                <a href="mailto:ruben.winant@hotmail.com?SUBJECT=portfolio">
+                    <button>Email</button>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <h1>Get in touch</h1>
+        <br>
+        <div class="footerContent">
+            <a href="https://dribbble.com/rubenw">
+                <div class="mediaCell">
+                    <i class="dribbble fa fa-dribbble fa-3x"></i>
+                    <span class="mediaName">Dribbble</span>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ruben-winant/">
+                <div class="mediaCell">
+                    <i class="linkedin fa fa-linkedin fa-3x"></i>
+                    <span class="mediaName">LinkedIn</span>
+                </div>
+            </a>
+
+            <a href="https://twitter.com/ruben_winant">
+                <div class="mediaCell">
+                    <i class="twitter fa fa-twitter fa-3x"></i>
+                    <span class="mediaName">Twitter</span>
+                </div>
+            </a>
+        </div>
+        <br>
+        <br>
+        <span>Copyright © 2020 Ruben Winant. All rights reserved.</span>
+    </footer>
+</body>
+<script>
+    document.getElementById("mobileMenuButton").addEventListener("click", function () {
+        if (document.getElementById("popUpMenu").style.display === "none") {
+            document.getElementById("popUpMenu").style.display = "flex";
+            document.getElementById("footer").style.display = "none";
+            sectionDisplay(false);
+        } else {
+            document.getElementById("popUpMenu").style.display = "none"
+            document.getElementById("footer").style.display = "block";
+            sectionDisplay(true);
+        }
+    });
+
+
+    var links = document.getElementsByTagName("a");
+    var j = 0;
+    for (j = 0; j < links.length; j++) {
+        links[j].addEventListener("click", function () {
+            document.getElementById("popUpMenu").style.display = "none"
+            document.getElementById("footer").style.display = "block";
+            sectionDisplay(true);
+        });
+    }
+
+    //hide / display all elements
+    function sectionDisplay(show) {
+        var sections = document.getElementsByTagName("section");
+        var i = 0;
+        for (i = 0; i < sections.length; i++) {
+            if (show) {
+                sections[i].style.display = "block";
+            } else {
+                sections[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</html>
