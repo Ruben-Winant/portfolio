@@ -1,550 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155524738-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<head></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- add seo data -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155524738-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-155524738-1');
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"
-        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <title>Ruben Winant</title>
+    gtag('config', 'UA-155524738-1');
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+<title>Ruben Winant</title>
 
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            padding: 0;
-            margin: 0;
-            height: 100%;
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    /* SCROLLBAR */
+    body::-webkit-scrollbar {
+        width: 0.6em;
+    }
+
+    body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px #1B242F;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #3898EC;
+        outline: 1px solid #1B242F;
+    }
+
+    /* NAVIGATION */
+    .menu {
+        margin-top: 25px;
+        max-width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .navList {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navItem {
+        text-decoration: none;
+        color: black;
+        font-size: large;
+        margin-left: 25px;
+    }
+
+    .navMain {
+        font-size: 40px;
+        color: black;
+    }
+
+    /* LINKS */
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* BUTTONS */
+    button {
+        color: white;
+        background-color: #3898EC;
+        border: none;
+        padding: 14px 20px 14px 20px;
+        font-size: large;
+    }
+
+    button:hover {
+        box-shadow: -10px 10px rgb(30, 110, 180);
+        cursor: pointer;
+    }
+
+    /* CONTAINERS */
+    section {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+
+    article {
+        max-width: 50%;
+        align-items: center;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px 0px 20px 0px;
+        background-color: #1B242F;
+        color: white;
+        padding: 70px;
+    }
+
+    .aboutContainer {
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portfolioContainer,
+    .contactContainer,
+    .skillsContainer,
+    .menu {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contactContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .skillsContent {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footerContent {
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* TEXTS  */
+    h1 {
+        margin-top: -5px;
+        font-weight: normal;
+        font-size: xx-large;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: x-large;
+    }
+
+    span {
+        font-weight: initial;
+        font-size: larger;
+    }
+
+    i {
+        color: #3898EC;
+    }
+
+    /* CONTEXT SPECIFIC */
+    .aboutLeft {
+        grid-column: 1;
+        max-width: 85%;
+    }
+
+    .aboutRight {
+        grid-column: 2;
+        text-align: right;
+    }
+
+    .aboutRight img {
+        max-width: 250px;
+    }
+
+    .portfolioBottom {
+        display: grid;
+        justify-content: space-between;
+    }
+
+    .portfolioCard {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        width: 200px;
+        grid-row: 1;
+        max-height: 300px;
+        min-height: 100px;
+    }
+
+    .portfolioCard img {
+        max-width: 200px;
+        min-width: 200px;
+        max-height: 200px;
+        min-height: 180px;
+        margin-bottom: 5px;
+    }
+
+    .portfolioCard:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .portfolioCard span {
+        padding: 4px;
+    }
+
+    .mediaCell {
+        display: flex;
+        width: 200px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .mediaCell:hover {
+        cursor: pointer;
+    }
+
+    .mediaName {
+
+        color: white;
+        text-decoration: none;
+    }
+
+    /* ---------------------------------------------------------------- */
+
+    .skillListTitle:hover {
+        cursor: pointer;
+    }
+
+    .skillsList {
+        list-style: none;
+        padding-left: 15px;
+    }
+
+    .skillItem {
+        margin-bottom: 10px;
+        width: 160px;
+    }
+
+    /* SKILL RATINGS */
+    .good {
+        color: rgb(134, 214, 13);
+        align-self: flex-end;
+    }
+
+    .mediocre {
+        color: rgb(216, 131, 20);
+        align-self: flex-end;
+    }
+
+    .beginner {
+        color: rgb(211, 28, 28);
+        align-self: flex-end;
+    }
+
+    /* ANIMATIONS */
+    .dribbble:hover {
+        -webkit-animation: bounce 1s infinite;
+        animation: bounce 1s infinite;
+    }
+
+    .linkedin:hover {
+        -webkit-animation: heartBeat 1s infinite;
+        animation: heartBeat 1s infinite;
+    }
+
+    .twitter:hover {
+        -webkit-animation: swing 1s infinite;
+        animation: swing 1s infinite;
+    }
+
+    .github:hover {
+        -webkit-animation: rubberBand 1s infinite;
+        animation: rubberBand 1s infinite;
+    }
+
+    .inDev {
+        position: absolute;
+        border-top: 40px solid rgb(41, 41, 41);
+        border-bottom: 40px solid transparent;
+        border-right: 40px solid transparent;
+        width: 80px;
+        color: white;
+
+    }
+
+    .mobileMenuButton {
+        display: none;
+        position: fixed;
+        right: 50px;
+        top: 50px;
+    }
+
+    .rectangle {
+        height: 4px;
+        width: 30px;
+        border-radius: 25px;
+        background-color: #1B242F;
+        margin-bottom: 4px;
+    }
+
+    /* MOBILE MENU POP UP */
+    .popUpMenu {
+        display: none;
+        min-height: 100%;
+        background-color: white;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .navListPopUp {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navItemPopUp {
+        display: block;
+        text-decoration: none;
+        color: #1B242F;
+        font-size: xx-large;
+        font-weight: 700;
+        margin-bottom: 20%;
+        margin-top: 20%;
+    }
+
+    /* -------------------------------- MEDIA QUERIES -------------------------------- */
+    /* should cover most smartphones */
+    @media (max-width: 767.98px) {
+
+        .mobileMenuButton {
+            display: block;
         }
 
-        /* SCROLLBAR */
-        body::-webkit-scrollbar {
-            width: 0.6em;
+        /* Hide img */
+        .aboutContainer img {
+            display: none;
         }
 
-        body::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 6px #1B242F;
-        }
-
-        body::-webkit-scrollbar-thumb {
-            background-color: #3898EC;
-            outline: 1px solid #1B242F;
-        }
-
-        /* NAVIGATION */
+        /* hide default menu */
         .menu {
-            margin-top: 25px;
-            max-width: 50%;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+            display: none;
         }
 
-        .navList {
-            display: flex;
-            list-style-type: none;
-        }
-
-        .navItem {
-            text-decoration: none;
-            color: black;
-            font-size: large;
-            margin-left: 25px;
-        }
-
-        .navMain {
-            font-size: 40px;
-            color: black;
-        }
-
-        /* LINKS */
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        /* BUTTONS */
-        button {
-            color: white;
-            background-color: #3898EC;
-            border: none;
-            padding: 14px 20px 14px 20px;
-            font-size: large;
-        }
-
-        button:hover {
-            box-shadow: -10px 10px rgb(30, 110, 180);
-            cursor: pointer;
-        }
-
-        /* CONTAINERS */
-        section {
-            margin-top: 120px;
-            margin-bottom: 120px;
-        }
-
+        /* Make everything wider */
         article {
-            max-width: 50%;
-            align-items: center;
+            max-width: 60%;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px 0px 20px 0px;
-            background-color: #1B242F;
-            color: white;
-            padding: 70px;
+        /* center button */
+        .mediaCell {
+            flex-direction: column;
+            margin-bottom: 20px;
         }
 
-        .aboutContainer {
-            display: grid;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .portfolioContainer,
-        .contactContainer,
-        .skillsContainer,
-        .menu {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contactContainer {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .skillsContent {
-            display: flex;
-            justify-content: space-between;
-        }
-
+        /* content row => column */
         .footerContent {
-            display: flex;
-            justify-content: center;
-            justify-content: space-between;
-            width: fit-content;
+            flex-direction: column;
+        }
+
+        /* give buttons their shadow */
+        button {
+            box-shadow: -10px 10px rgb(30, 110, 180);
+        }
+
+        /* bring section a bit closer to eachother */
+        section {
+            margin-top: 80px;
+        }
+
+        /* widen left side of about section */
+        .aboutLeft {
+            max-width: 100%;
+        }
+
+        /* place contact content in a column */
+        .contactContainer {
+            flex-direction: column;
+        }
+
+        .contactButton {
+            margin-top: 20px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* TEXTS  */
-        h1 {
-            margin-top: -5px;
-            font-weight: normal;
-            font-size: xx-large;
-            margin-bottom: 5px;
+        /* center skills */
+        .skillsContent {
+            flex-direction: column;
+            align-items: left;
         }
 
-        h2 {
-            font-weight: 500;
-            font-size: x-large;
+        /* add some space for easier access */
+        .skillsListContainer {
+            margin-bottom: 20px;
         }
 
-        span {
-            font-weight: initial;
-            font-size: larger;
-        }
 
-        i {
-            color: #3898EC;
-        }
-
-        /* CONTEXT SPECIFIC */
-        .aboutLeft {
-            grid-column: 1;
-            max-width: 85%;
-        }
-
-        .aboutRight {
-            grid-column: 2;
-            text-align: right;
-        }
-
-        .aboutRight img {
-            max-width: 250px;
-        }
-
+        /* center projects */
         .portfolioBottom {
-            display: grid;
-            justify-content: space-between;
-        }
-
-        .portfolioCard {
             display: flex;
             flex-direction: column;
-            max-width: 200px;
-            width: 200px;
-            grid-row: 1;
-            max-height: 300px;
-            min-height: 100px;
-        }
-
-        .portfolioCard img {
-            max-width: 200px;
-            min-width: 200px;
-            max-height: 200px;
-            min-height: 180px;
-            margin-bottom: 5px;
-        }
-
-        .portfolioCard:hover {
-            transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-            cursor: pointer;
-        }
-
-        .portfolioCard span {
-            padding: 4px;
-        }
-
-        .mediaCell {
-            display: flex;
-            width: 200px;
+            justify-content: space-between;
             align-items: center;
+        }
+
+        /* place portfolio card vertical */
+        .portfolioCard {
+            max-width: 200px;
+            grid-row: auto;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+
+    /* everything between */
+    @media (min-width: 768px) {
+
+        .mobileMenuButton {
+            display: block;
+        }
+
+        /* Mobile menu */
+        .mobileMenu {
+            display: block;
+        }
+
+        /* hide default menu */
+        .menu {
+            display: none;
+        }
+
+        /* Make everything wider */
+        article {
+            max-width: 70%;
+        }
+
+        /* Hide img */
+        .aboutContainer img {
+            display: none;
+        }
+
+        /* bring section a bit closer to eachother */
+        section {
+            margin-top: 80px;
+        }
+
+        /* center projects */
+        .portfolioBottom {
+            display: grid;
+            flex-direction: column;
             justify-content: space-around;
+            align-items: center;
         }
 
-        .mediaCell:hover {
-            cursor: pointer;
+        /* place portfolio card vertical */
+        .portfolioCard {
+            max-width: 200px;
+            grid-row: auto;
+            text-align: center;
+            margin-bottom: 15px;
         }
 
-        .mediaName {
-
-            color: white;
-            text-decoration: none;
+        button {
+            box-shadow: -10px 10px rgb(30, 110, 180);
         }
 
-        /* ---------------------------------------------------------------- */
-
-        .skillListTitle:hover {
-            cursor: pointer;
+        .r1 {
+            grid-row: 1;
         }
 
-        .skillsList {
-            list-style: none;
-            padding-left: 15px;
+        .r2 {
+            grid-row: 2;
         }
+    }
 
-        .skillItem {
-            margin-bottom: 10px;
-            width: 160px;
-        }
-
-        /* SKILL RATINGS */
-        .good {
-            color: rgb(134, 214, 13);
-            align-self: flex-end;
-        }
-
-        .mediocre {
-            color: rgb(216, 131, 20);
-            align-self: flex-end;
-        }
-
-        .beginner {
-            color: rgb(211, 28, 28);
-            align-self: flex-end;
-        }
-
-        /* ANIMATIONS */
-        .dribbble:hover {
-            -webkit-animation: bounce 1s infinite;
-            animation: bounce 1s infinite;
-        }
-
-        .linkedin:hover {
-            -webkit-animation: heartBeat 1s infinite;
-            animation: heartBeat 1s infinite;
-        }
-
-        .twitter:hover {
-            -webkit-animation: swing 1s infinite;
-            animation: swing 1s infinite;
-        }
-
-        .github:hover {
-            -webkit-animation: rubberBand 1s infinite;
-            animation: rubberBand 1s infinite;
-        }
-
-        .inDev {
-            position: absolute;
-            border-top: 40px solid rgb(41, 41, 41);
-            border-bottom: 40px solid transparent;
-            border-right: 40px solid transparent;
-            width: 80px;
-            color: white;
-
-        }
+    /* small computers */
+    @media (min-width: 1050px) {
 
         .mobileMenuButton {
             display: none;
-            position: fixed;
-            right: 50px;
-            top: 50px;
         }
 
-        .rectangle {
-            height: 4px;
-            width: 30px;
-            border-radius: 25px;
-            background-color: #1B242F;
-            margin-bottom: 4px;
+        article {
+            max-width: 60%;
         }
 
-        /* MOBILE MENU POP UP */
-        .popUpMenu {
-            display: none;
-            min-height: 100%;
-            background-color: white;
-            min-height: 100vh;
-            align-items: center;
-        }
-
-        .navListPopUp {
-            list-style: none;
+        .menu {
             display: flex;
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 60%;
         }
 
-        .navItemPopUp {
+        /* Mobile menu */
+        .mobileMenu {
+            display: none;
+        }
+
+        .aboutContainer img {
             display: block;
-            text-decoration: none;
-            color: #1B242F;
-            font-size: xx-large;
-            font-weight: 700;
-            margin-bottom: 20%;
-            margin-top: 20%;
         }
 
-        /* -------------------------------- MEDIA QUERIES -------------------------------- */
-        /* should cover most smartphones */
-        @media (max-width: 767.98px) {
-
-            .mobileMenuButton {
-                display: block;
-            }
-
-            /* Hide img */
-            .aboutContainer img {
-                display: none;
-            }
-
-            /* hide default menu */
-            .menu {
-                display: none;
-            }
-
-            /* Make everything wider */
-            article {
-                max-width: 60%;
-            }
-
-            /* center button */
-            .mediaCell {
-                flex-direction: column;
-                margin-bottom: 20px;
-            }
-
-            /* content row => column */
-            .footerContent {
-                flex-direction: column;
-            }
-
-            /* give buttons their shadow */
-            button {
-                box-shadow: -10px 10px rgb(30, 110, 180);
-            }
-
-            /* bring section a bit closer to eachother */
-            section {
-                margin-top: 80px;
-            }
-
-            /* widen left side of about section */
-            .aboutLeft {
-                max-width: 100%;
-            }
-
-            /* place contact content in a column */
-            .contactContainer {
-                flex-direction: column;
-            }
-
-            .contactButton {
-                margin-top: 20px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            /* center skills */
-            .skillsContent {
-                flex-direction: column;
-                align-items: left;
-            }
-
-            /* add some space for easier access */
-            .skillsListContainer {
-                margin-bottom: 20px;
-            }
-
-
-            /* center projects */
-            .portfolioBottom {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            /* place portfolio card vertical */
-            .portfolioCard {
-                max-width: 200px;
-                grid-row: auto;
-                text-align: center;
-                margin-bottom: 15px;
-            }
+        .aboutContainer {
+            justify-content: space-between;
         }
 
-        /* everything between */
-        @media (min-width: 768px) {
-
-            .mobileMenuButton {
-                display: block;
-            }
-
-            /* Mobile menu */
-            .mobileMenu {
-                display: block;
-            }
-
-            /* hide default menu */
-            .menu {
-                display: none;
-            }
-
-            /* Make everything wider */
-            article {
-                max-width: 70%;
-            }
-
-            /* Hide img */
-            .aboutContainer img {
-                display: none;
-            }
-
-            /* bring section a bit closer to eachother */
-            section {
-                margin-top: 80px;
-            }
-
-            /* center projects */
-            .portfolioBottom {
-                display: grid;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-            }
-
-            /* place portfolio card vertical */
-            .portfolioCard {
-                max-width: 200px;
-                grid-row: auto;
-                text-align: center;
-                margin-bottom: 15px;
-            }
-
-            button {
-                box-shadow: -10px 10px rgb(30, 110, 180);
-            }
-
-            .r1 {
-                grid-row: 1;
-            }
-
-            .r2 {
-                grid-row: 2;
-            }
+        .r1 {
+            grid-row: 1;
         }
 
-        /* small computers */
-        @media (min-width: 1050px) {
-
-            .mobileMenuButton {
-                display: none;
-            }
-
-            article {
-                max-width: 60%;
-            }
-
-            .menu {
-                display: flex;
-                max-width: 60%;
-            }
-
-            /* Mobile menu */
-            .mobileMenu {
-                display: none;
-            }
-
-            .aboutContainer img {
-                display: block;
-            }
-
-            .aboutContainer {
-                justify-content: space-between;
-            }
-
-            .r1 {
-                grid-row: 1;
-            }
-
-            .r2 {
-                grid-row: 1;
-            }
-
-            button {
-                box-shadow: none;
-            }
-
-            .menu,
-            article {
-                max-width: 56%;
-            }
+        .r2 {
+            grid-row: 1;
         }
 
-        /* biggest screens */
-        @media (min-width: 1441px) {
-
-
-            .menu,
-            article {
-                max-width: 40%;
-            }
+        button {
+            box-shadow: none;
         }
-    </style>
+
+        .menu,
+        article {
+            max-width: 56%;
+        }
+    }
+
+    /* biggest screens */
+    @media (min-width: 1441px) {
+
+
+        .menu,
+        article {
+            max-width: 40%;
+        }
+    }
+</style>
 </head>
 
 <body>
